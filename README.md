@@ -1,12 +1,12 @@
-##JPEG
+## JPEG
 This is my brushless competition blaster with all the bells and whistles of the best.
 
-##THIS IS NOT A FULL RELEASE NOR IS THIS BLASTER TESTED
+## THIS IS NOT A FULL RELEASE NOR IS THIS BLASTER TESTED
 
-##Features
+## Features
 This will be a list of features
 
-##Hardware List
+## Hardware List
 Kellytime
 
 
