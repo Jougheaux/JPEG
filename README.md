@@ -5,6 +5,7 @@ This is my brushless competition blaster with all the bells and whistles of the 
 
 ## Pictures
 <img src="JPEG.PNG">
+<img src="ClearJPEG.PNG">
 
 ## Features
 This will be a list of features
