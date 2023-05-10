@@ -8,11 +8,12 @@ This is my brushless competition blaster with all the bells and whistles of the 
 <img src="JPEGClear.PNG">
 
 ## Features
-This will be a list of features
-Brushless
-BCAR
-Selectfire
-Pre-wheel bearing guide
+
+- This will be a list of features
+- Brushless
+- BCAR
+- Selectfire
+- Pre-wheel bearing guide
 
 ## Hardware List
 Kellytime (Detlaff, Plusmotor)
