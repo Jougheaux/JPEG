@@ -4,6 +4,7 @@ This is my brushless competition blaster with all the bells and whistles of the 
 ## THIS IS NOT A FULL RELEASE NOR IS THIS BLASTER TESTED
 
 ## Pictures
+<img src="JPEG.PNG">
 
 ## Features
 This will be a list of features
