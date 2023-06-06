@@ -32,6 +32,7 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way to many hours
 
 ## To Do
+- Assembly guide once we build another one to take pictures of
 - Code tweaks to be more consistent
 - Solenoid version (pusher body can be repurposed to have a solenoid mount I just need to do CAD) (Eli Wu if you're reading this can I have one please)
 - See if sls cage is better
