@@ -9,6 +9,7 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 
 ## Features
 
+- 185fps average, 220 max, standard deviation of as low as 10fps (should increase with better wheels)
 - Brushless
 - BCAR
 - Selectfire
