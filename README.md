@@ -29,7 +29,7 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - Adrian Kelly/ KellyIndustries supplied their new [plus motors](https://kellyindustries.us/collections/flywheel-parts/products/plus-motor-brushless) and [Dettlaff](https://kellyindustries.us/collections/flywheel-parts/products/dettlaff-brushless-blaster-controller) along with creating the bruxa, which JPEG's pusher is based on (and the [Kellyindustries discord](https://discord.gg/gnhjt6QDAX) for helping troubleshoot)
 - [Raymond Chien](https://www.linkedin.com/in/raymond-chien-1a0341229?original_referer=https%3A%2F%2Fwww.google.com%2F) for giving me parts and designs to work off of and for being a meme lord
 - [Brad](https://thefactoryamsterdam.com/) [Roboman](https://roboman.net/) for giving me  bearings and being a cool dude
-- [Gavinfuzzy](https://www.etsy.com/shop/GavinfuzzyCustoms) for giving me CAD for the worker stock from the SBF
+- [Gavinfuzzy](https://www.etsy.com/shop/GavinfuzzyCustoms) for giving me CAD for the worker stock from the SBL
 - Mike Farley and Mathew Davis for helping guide aesthetics and design langauge
 - RPI HVZ community for providing feedback and help
 - Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way to many hours
