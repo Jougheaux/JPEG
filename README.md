@@ -33,7 +33,7 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - [Gavinfuzzy](https://www.etsy.com/shop/GavinfuzzyCustoms) for giving me CAD for the worker stock from the SBL
 - Mike Farley and Mathew Davis for helping guide aesthetics and design langauge
 - RPI HVZ community for providing feedback and help
-- Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way to many hours
+- Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way too many hours
 
 ## To Do
 - Print, assembly, wiring guides
