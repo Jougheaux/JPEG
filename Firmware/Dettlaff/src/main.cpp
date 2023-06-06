@@ -13,8 +13,8 @@
 
 // Configuration Variables
 
-char wifiSsid[32] = "SamNet-2.4";
-char wifiPass[63] = "EngageWireless9!";
+char wifiSsid[32] = "ssid";
+char wifiPass[63] = "pass";
 uint8_t numMotors = 2; // 2 for single-stage, 4 for dual-stage
 uint32_t revRPM[4] = {50000, 50000, 50000, 50000}; // adjust this to change fps - note that these numbers currently assume you have a 4S battery! will fix soon
 uint32_t idleRPM[4] = {1000, 1000, 1000, 1000};
