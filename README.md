@@ -1,7 +1,7 @@
 ## JPEG
 This is my(RPI's) brushless competition blaster with all the bells and whistles of the best.
 
-## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GURANTEED TO BE FINAL
+## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GURANTEED TO BE FINAL.  DM me on discord (asdf_#8841) if you have questions.
 
 ## Pictures
 <img src="JPEG.png">
@@ -18,6 +18,7 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 
 ## Instructions
 If you want to build this buy the hardware, look at the CAD, follow Dettlaff instructions (which are all in the folder with pre-configured firmware)
+Grip bottom is serialized so ask me for available numbers (I'll probably make a spreadsheet to claim if there's enough people making them)
 
 ## Hardware List
 Kellytime (Detlaff, Plusmotor)  
