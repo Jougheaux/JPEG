@@ -1,7 +1,7 @@
 ## JPEG
 This is my(RPI's) brushless competition blaster with all the bells and whistles of the best.
 
-## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GURANTEED TO BE FINAL.  DM me on discord (asdf_#8841) if you have questions.
+## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GURANTEED TO BE FINAL.  DM me on discord (jougheaux) if you have questions.
 
 ## Pictures
 <img src="JPEG.png">
