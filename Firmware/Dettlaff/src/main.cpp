@@ -5,66 +5,11 @@
 #include "DShotRMT.h"
 #include "ESP32Servo.h"
 #include "types.h"
-#include "boards_config.cpp"
+#include "CONFIGURATION.h"
 #include "driver.h"
 #include "fetDriver.h"
 #include "at8870Driver.h"
 #include "hBridgeDriver.h"
-
-// Configuration Variables
-
-char wifiSsid[32] = "SSID";
-char wifiPass[63] = "Password";
-uint8_t numMotors = 2; // 2 for single-stage, 4 for dual-stage
-uint32_t revRPM[4] = {50000, 50000, 50000, 50000};
-//uint32_t revRPM[4] = {40000, 40000, 40000, 40000};
-//uint32_t revRPM[4] = {25000, 25000, 25000, 25000}; // adjust this to change fps - note that these numbers currently assume you have a 4S battery! will fix soon
-uint32_t idleRPM[4] = {0, 0, 0, 0};
-uint32_t idleTime_ms = 0; // how long to idle the flywheels for after releasing the trigger, in milliseconds
-uint32_t motorKv = 3200;
-pins_t pins = pins_v0_5; // select the one that matches your board revision and pusher type
-// Options:
-// _noid means use the flywheel output to drive a solenoid pusher
-// _n20 for a pusher motor on the pusher output
-// pins_v0_4_n20
-// pins_v0_4_noid
-// pins_v0_3_n20
-// pins_v0_3_noid
-// pins_v0_2
-// pins_v0_1
-pusherType_t pusherType = PUSHER_MOTOR_CLOSEDLOOP;
-// PUSHER_MOTOR_CLOSEDLOOP or PUSHER_SOLENOID_OPENLOOP
-uint16_t fireMode = 1; //0 is full auto, 1 is burst, 2 is single fire
-uint16_t burstLength = 3;
-uint8_t bufferMode = 1;
-// 0 = stop firing when trigger is released
-// 1 = complete current burst when trigger is released
-// 2 = fire as many bursts as trigger pulls
-// for full auto, set burstLength high (50+) and bufferMode = 0
-uint16_t firingDelay_ms = 50; // delay to allow flywheels to spin up before pushing dart
-uint16_t solenoidExtendTime_ms = 20;
-uint16_t solenoidRetractTime_ms = 35;
-bool pusherReverseDirection = false;
-
-// Advanced Configuration Variables
-
-uint16_t pusherStallTime_ms = 500; // for PUSHER_MOTOR_CLOSEDLOOP, how long do you run the motor without seeing an update on the cycle control switch before you decide the motor is stalled?
-uint16_t spindownSpeed = 1; // higher number makes the flywheels spin down faster when releasing the rev trigger
-bool revSwitchNormallyClosed = false; // should we invert rev signal?
-bool triggerSwitchNormallyClosed = false;
-bool cycleSwitchNormallyClosed = false;
-uint16_t debounceTime = 25; // ms
-char AP_SSID[32] = "Dettlaff";
-char AP_PW[32] = "KellyIndu";
-dshot_mode_t dshotMode =  DSHOT150; // DSHOT_OFF to fall back to servo PWM
-uint16_t targetLoopTime_us = 1000; // microseconds
-uint32_t firingRPM[4] = {revRPM[0]*9/10, revRPM[1]*9/10, // for closed loop flywheel mode only - not implemented yet
-                         revRPM[2]*9/10, revRPM[3]*9/10};
-float maxDutyCycle_pct = 98;
-uint8_t deadtime = 10;
-uint16_t pwmFreq_hz = 20000;
-
-// End Configuration Variables
 
 uint32_t loopStartTimer_us = micros();
 uint16_t loopTime_us = targetLoopTime_us;
@@ -74,8 +19,7 @@ uint32_t pusherTimer_ms = 0;
 uint32_t zeroRPM[4] = {0, 0, 0, 0};
 uint32_t (*targetRPM)[4]; // a pointer to a uint32_t[4] array. always points to either revRPM, idleRPM, or zeroRPM
 uint32_t throttleValue[4] = {0, 0, 0, 0}; // scale is 0 - 1999
-uint32_t batteryADC_mv = 1340; // voltage at the ADC, after the voltage divider
-uint16_t shotsToFire = 0;
+int16_t shotsToFire = 0;
 flywheelState_t flywheelState = STATE_IDLE;
 bool firing = false;
 bool closedLoopFlywheels = false;
@@ -123,27 +67,27 @@ void setup() {
 
   if (pins.revSwitch) {
     revSwitch.attach(pins.revSwitch, INPUT_PULLUP);
-    revSwitch.interval(debounceTime);
+    revSwitch.interval(debounceTime_ms);
     revSwitch.setPressedState(revSwitchNormallyClosed);
   }
   if (pins.triggerSwitch) {
     triggerSwitch.attach(pins.triggerSwitch, INPUT_PULLUP);
-    triggerSwitch.interval(debounceTime);
+    triggerSwitch.interval(debounceTime_ms);
     triggerSwitch.setPressedState(triggerSwitchNormallyClosed);
   }
   if (pins.cycleSwitch) {
     cycleSwitch.attach(pins.cycleSwitch, INPUT_PULLUP);
-    cycleSwitch.interval(debounceTime);
+    cycleSwitch.interval(debounceTime_ms);
     cycleSwitch.setPressedState(cycleSwitchNormallyClosed);
   }
   if (pins.select1) {
     select1.attach(pins.select1, INPUT_PULLUP);
-    select1.interval(debounceTime);
+    select1.interval(debounceTime_ms);
     select1.setPressedState(false);
   }
   if (pins.select2) {
     select2.attach(pins.select2, INPUT_PULLUP);
-    select2.interval(debounceTime);
+    select2.interval(debounceTime_ms);
     select2.setPressedState(false);
   }
 
@@ -166,36 +110,32 @@ void setup() {
 void loop() {
   loopStartTimer_us = micros();
   time_ms = millis();
-  //select fire
-  if (pins.select1) {
+  //selectfire
+    if (pins.select1) {
     select1.update();
   }
   if (pins.select2) {
     select2.update();
   }
   if(select1.isPressed()){
-    fireMode = 0;
     burstLength = 300;
     bufferMode = 0;
   }
   else if(select2.isPressed()){
-    fireMode = 2;
     burstLength = 1;
     bufferMode = 1;
   }
   else {
-    fireMode=1;
     burstLength = 3;
     bufferMode = 1;
   }
-
+  
   if (pins.revSwitch) {
     revSwitch.update();
   }
   if (pins.triggerSwitch) {
     triggerSwitch.update();
   }
-
   // *Need to implement*
   // Get flywheel RPM data, store it in motorRPM
 
@@ -210,8 +150,8 @@ void loop() {
       shotsToFire += burstLength;
     }
   } else if (triggerSwitch.released()) {
-    if (bufferMode == 0) {
-      shotsToFire = 0;
+    if(bufferMode == 0){
+      shotsToFire = 1;
     }
   }
 
@@ -222,8 +162,8 @@ void loop() {
         targetRPM = &revRPM;
         lastRevTime_ms = time_ms;
         flywheelState = STATE_ACCELERATING;
-      } else if (time_ms < lastRevTime_ms + idleTime_ms && lastRevTime_ms > 0 ) { // idle flywheels
-        targetRPM = &zeroRPM;
+      } else if (time_ms < lastRevTime_ms + idleTime_ms && lastRevTime_ms > 0) { // idle flywheels
+        targetRPM = &idleRPM;
       } else { // stop flywheels
         targetRPM = &zeroRPM;
       }
@@ -246,7 +186,7 @@ void loop() {
       break;
 
     case STATE_FULLSPEED:
-      if (!revSwitch.isPressed() && shotsToFire == 0 && !firing) {
+      if (!revSwitch.isPressed() && shotsToFire <= 0 && !firing) {
         flywheelState = STATE_IDLE;
       } else if (shotsToFire > 0 || firing) {
         switch (pusherType) {
@@ -257,12 +197,12 @@ void loop() {
               pusher->drive(100, pusherReverseDirection);
               firing = true;
               pusherTimer_ms = time_ms;
-            } else if (firing && shotsToFire == 1 && cycleSwitch.pressed()) { // brake pusher
-              pusher->brake();
-              firing = false;
-              shotsToFire=0;
-            } else if (firing && shotsToFire > 0 && cycleSwitch.released()) {
-              shotsToFire = shotsToFire-1;
+            } else if (firing && cycleSwitch.pressed()) {
+              shotsToFire = shotsToFire - 1;
+              if (shotsToFire <= 0 ) {  // brake pusher
+                pusher->brake();
+                firing = false;
+              }
               pusherTimer_ms = time_ms;
             } else if (firing && time_ms > pusherTimer_ms + pusherStallTime_ms) { // stall protection
               pusher->coast();
@@ -296,9 +236,9 @@ void loop() {
   } else { // open loop case
     for (int i = 0; i < numMotors; i++) {
       if (throttleValue[i] == 0) {
-        throttleValue[i] = min(maxThrottle, maxThrottle * *targetRPM[i] / batteryADC_mv * 1000 / scaledMotorKv);
+        throttleValue[i] = min(maxThrottle, maxThrottle * (*targetRPM)[i] / batteryADC_mv * 1000 / scaledMotorKv);
       } else {
-        throttleValue[i] = max(min(maxThrottle, maxThrottle * *targetRPM[i] / batteryADC_mv * 1000 / scaledMotorKv),
+        throttleValue[i] = max(min(maxThrottle, maxThrottle * (*targetRPM)[i] / batteryADC_mv * 1000 / scaledMotorKv),
         throttleValue[i]-spindownSpeed);}
     }
   }
@@ -310,7 +250,7 @@ void loop() {
     }
   } else {
     for (int i = 0; i < numMotors; i++) {
-      dshot[i].send_dshot_value(throttleValue[0] + 48, NO_TELEMETRIC);
+      dshot[i].send_dshot_value(throttleValue[i] + 48, NO_TELEMETRIC);
     }
   }
   ArduinoOTA.handle();
