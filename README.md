@@ -1,7 +1,7 @@
 ## JPEG
 This is my(RPI's) brushless competition blaster with all the bells and whistles of the best.
 
-## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GURANTEED TO BE FINAL.  DM me on discord (jougheaux) if you have questions.
+## THIS BLASTER IS CURRENTLY IN AN OPEN BETA. THE FILES ARE FUNCTIONAL BUT NOT GUARANTEED TO BE FINAL.  DM me on discord (jougheaux) if you have questions.
 
 ## Pictures
 <img src="JPEG.png">
@@ -16,14 +16,19 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Pre-wheel bearing guide
 - Runs on KellyIndustries Dettlaff and Plusmotors
 
+## Updates
+- v0.2 greatly reduces support material needed to print this blaster, v0.1.1 files are there for people who started printing
+- Firmware is more reliable
+- Print guide outlined on second page of BOM (https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  )
+
 ## Instructions
 If you want to build this buy the hardware, look at the CAD, follow Dettlaff instructions (which are all in the folder with pre-configured firmware)
 Grip bottom is serialized so ask me for available numbers (I'll probably make a spreadsheet to claim if there's enough people making them)
+https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  
 
 ## Hardware List
 Kellytime (Detlaff, Plusmotor)  
 Parts cost about $170 per part, total cost higher if buying sets of screws  
-https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  
 Note: the worker stock is optional, however it is designed to only fit that stock.
 
 ## Thank Yous
@@ -37,7 +42,7 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way too many hours
 
 ## To Do
-- Print, assembly, wiring guides
+- Assembly and wiring guides
 - Code tweaks to be more consistent
 - Solenoid version (pusher body can be repurposed to have a solenoid mount I just need to do CAD) (Eli Wu if you're reading this can I have one please)
 - See if sls cage is better
