@@ -17,6 +17,10 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Runs on KellyIndustries Dettlaff and Plusmotors
 
 ## Updates
+- minor tweaks to: pusher body, wedge, stock base, stock mech plate, muzzle, shroud
+- firmware now allows for 100, 130, and 200 fps options from selector switch on boot up
+- build guide coming soon
+--------------------------------------
 - v0.2 greatly reduces support material needed to print this blaster, v0.1.1 files are there for people who started printing
 - Firmware is more reliable
 - Print guide outlined on second page of BOM (https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  )
