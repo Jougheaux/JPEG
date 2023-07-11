@@ -1,7 +1,7 @@
 #include "boards_config.h" // board pinouts are in this file. you can check and modify which switch is on which pin there.
 
 // Flywheel Settings
-uint32_t revRPM[4] = {25000, 25000, 25000, 25000}; // adjust this to change fps
+uint32_t revRPM[4] = {18000, 18000, 18000, 18000}; // adjust this to change fps
 uint32_t idleRPM[4] = {1000, 1000, 1000, 1000};
 uint32_t idleTime_ms = 0; // how long to idle the flywheels for after releasing the trigger, in milliseconds
 uint32_t motorKv = 3200;
@@ -26,7 +26,7 @@ pins_t pins = pins_v0_5; // select the one that matches your board revision
 
 // Pusher Settings
 pusherType_t pusherType = PUSHER_MOTOR_CLOSEDLOOP; // either PUSHER_MOTOR_CLOSEDLOOP or PUSHER_SOLENOID_OPENLOOP
-uint16_t burstLength = 3;
+uint16_t burstLength = 1;
 uint8_t bufferMode = 1;
 // 0 = stop firing when trigger is released
 // 1 = complete current burst when trigger is released

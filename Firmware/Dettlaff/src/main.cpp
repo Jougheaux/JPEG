@@ -105,13 +105,35 @@ void setup() {
       dshot[i].begin(dshotMode, false); // bitrate & bidirectional
     }
   }
+  //set velocity by switch position
+  if (pins.select1) {
+    select1.update();
+  }
+  if (pins.select2) {
+    select2.update();
+  }
+  if(select1.isPressed()){
+    for (int i = 0; i < numMotors; i++) {
+      revRPM[i] = 50000;
+    }
+  }
+  else if(select2.isPressed()){
+    for (int i = 0; i < numMotors; i++) {
+      revRPM[i] = 18000;
+    }
+  }
+  else {
+    for (int i = 0; i < numMotors; i++) {
+      revRPM[i] = 25000;
+    }
+  }
 }
 
 void loop() {
   loopStartTimer_us = micros();
   time_ms = millis();
   //selectfire
-    if (pins.select1) {
+  if (pins.select1) {
     select1.update();
   }
   if (pins.select2) {
