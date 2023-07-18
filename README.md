@@ -17,6 +17,9 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Runs on KellyIndustries Dettlaff and Plusmotors
 
 ## Updates
+- selectfire pictograph on magwell
+- assembly guide added here (https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
+--------------------------------------
 - minor tweaks to: pusher body, wedge, stock base, stock mech plate, muzzle, shroud
 - firmware now allows for 100, 130, and 200 fps options from selector switch on boot up
 - build guide coming soon
@@ -26,13 +29,13 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Print guide outlined on second page of BOM (https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  )
 
 ## Instructions
-If you want to build this buy the hardware, look at the CAD, follow Dettlaff instructions (which are all in the folder with pre-configured firmware)
-Grip bottom is serialized so ask me for available numbers (I'll probably make a spreadsheet to claim if there's enough people making them)
-https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  
+- [Print guide](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=258203420)
+- [Assembly guide](https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
+- Grip bottom is serialized so ask me for available numbers (I'll probably make a spreadsheet to claim if there's enough people making them)  
 
-## Hardware List
-Kellytime (Detlaff, Plusmotor)  
-Parts cost about $170 per part, total cost higher if buying sets of screws  
+## Hardware List  
+Parts cost about $175, total cost higher if buying sets of screws  
+[Hardware List](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0)  
 Note: the worker stock is optional, however it is designed to only fit that stock.
 
 ## Thank Yous
@@ -46,10 +49,10 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - Most importantly, Sofia Sherman for keeping me sane and grounded while I do CAD for way too many hours
 
 ## To Do
-- Assembly and wiring guides
-- Code tweaks to be more consistent
+- Wiring guides
 - Solenoid version (pusher body can be repurposed to have a solenoid mount I just need to do CAD) (Eli Wu if you're reading this can I have one please)
 - See if sls cage is better
+- Fix brownouts with large bursts (15+)
 
 
 ## Licensing
