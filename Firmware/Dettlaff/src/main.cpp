@@ -116,6 +116,7 @@ void setup() {
     for (int i = 0; i < numMotors; i++) {
       revRPM[i] = 50000;
     }
+    firingDelay_ms=150;
   }
   else if(select2.isPressed()){
     for (int i = 0; i < numMotors; i++) {
