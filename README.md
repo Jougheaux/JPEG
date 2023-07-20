@@ -16,21 +16,6 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Pre-wheel bearing guide
 - Runs on KellyIndustries Dettlaff and Plusmotors
 
-## Updates
- - adjusted heat set insert tolerance
- - uploaded wiring diagram (https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
---------------------------------------
-- selectfire pictograph on magwell
-- assembly guide added here (https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
---------------------------------------
-- minor tweaks to: pusher body, wedge, stock base, stock mech plate, muzzle, shroud
-- firmware now allows for 100, 130, and 200 fps options from selector switch on boot up
-- build guide coming soon
---------------------------------------
-- v0.2 greatly reduces support material needed to print this blaster, v0.1.1 files are there for people who started printing
-- Firmware is more reliable
-- Print guide outlined on second page of BOM (https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  )
-
 ## Instructions
 - [Print guide](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=258203420)
 - [Wiring guide](https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
@@ -40,7 +25,22 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 ## Hardware List  
 Parts cost about $175, total cost higher if buying sets of screws  
 [Hardware List](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0)  
-Note: the worker stock is optional, however it is designed to only fit that stock.
+Note: the worker stock is optional, however,  it is designed to only fit that stock.
+
+## Updates
+ - adjusted heat set insert tolerance
+ - uploaded wiring diagram (https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
+--------------------------------------
+- selectfire pictograph on magwell
+- assembly guide added here (https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
+--------------------------------------
+- minor tweaks to: pusher body, wedge, stock base, stock mech plate, muzzle, shroud
+- firmware now allows for 100, 130, and 200 fps options from the selector switch on boot up
+- build guide coming soon
+--------------------------------------
+- v0.2 greatly reduces support material needed to print this blaster, v0.1.1 files are there for people who started printing
+- Firmware is more reliable
+- Print guide outlined on the second page of BOM (https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=0  )
 
 ## Thank Yous
 I was the one working on the CAD, but this couldn't have been done without the efforts of the "RPI Nerf Industrial Complex" and members of the nerf community.
