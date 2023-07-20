@@ -17,6 +17,9 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 - Runs on KellyIndustries Dettlaff and Plusmotors
 
 ## Updates
+ - adjusted heat set insert tolerance
+ - uploaded wiring diagram (https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
+--------------------------------------
 - selectfire pictograph on magwell
 - assembly guide added here (https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
 --------------------------------------
@@ -30,6 +33,7 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 
 ## Instructions
 - [Print guide](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=258203420)
+- [Wiring guide](https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
 - [Assembly guide](https://docs.google.com/document/d/1t8XXDXZycTl_3nRU9CUnI02HiXrD-tiSQikEmLgy0f4/edit)
 - Grip bottom is serialized so ask me for available numbers (I'll probably make a spreadsheet to claim if there's enough people making them)  
 
