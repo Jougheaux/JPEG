@@ -2,7 +2,7 @@
 
 // Flywheel Settings
 uint32_t revRPM[4] = {18000, 18000, 18000, 18000}; // adjust this to change fps
-uint32_t idleRPM[4] = {1000, 1000, 1000, 1000};
+uint32_t idleRPM[4] = {15000, 15000, 15000, 15000};
 uint32_t idleTime_ms = 0; // how long to idle the flywheels for after releasing the trigger, in milliseconds
 uint32_t motorKv = 3200;
 uint32_t batteryADC_mv = 14800 / 11; // battery voltage in mv divided by voltage divider ratio (11)
