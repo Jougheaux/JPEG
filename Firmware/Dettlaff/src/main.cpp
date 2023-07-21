@@ -121,12 +121,12 @@ void setup() {
   }
   else if(select2.isPressed()){
     for (int i = 0; i < numMotors; i++) {
-      revRPM[i] = 18000;
+      revRPM[i] = 14000;
     }
   }
   else {
     for (int i = 0; i < numMotors; i++) {
-      revRPM[i] = 25000;
+      revRPM[i] = 22500;
     }
   }
 }
