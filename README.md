@@ -9,7 +9,21 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 
 <details>
 <summary>Updates (Click here)</summary>
- 
+
+ --------------------------------------
+ - Stock Base & Battery Tray changed to have easier access to the battery
+ - Lower changed to allow battery in grip and better printing
+ - Grip bottom changed to allow battery in grip
+ - Mag retention changed to have less slop
+ - Magwell changed to no longer hold the selector switch
+ - Pusher Body changed to hold the selector switch
+ - Motor Housing changed for better wire routing
+ - Wheels changed for smaller geometry
+ - Cage became Cage Body and Cage Inner to allow for better printing
+ - Muzzle is now threaded
+ - Shroud has a slightly smaller opening in front
+ - Added files for serialized grips and parametric cages/bcars
+ --------------------------------------
  - adjusted heat set insert tolerance
  - uploaded wiring diagram (https://docs.google.com/document/d/1IgKOaXz1Wq1czSlrQZNBrS4rJvw-7m4BnzTXSQHMin8/edit)
 --------------------------------------
