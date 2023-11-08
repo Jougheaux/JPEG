@@ -15,6 +15,7 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
  - Elongated pusher for reliable feeding with 36mm workers
  - changed pusher construction (removed wedge)
  - removed feed lips from cage inner
+ - "adding speed holes to the shroud for maximum brrrrrrrrr and cooling"
  --------------------------------------
  - Stock Base & Battery Tray changed to have easier access to the battery
  - Lower changed to allow battery in grip and better printing
