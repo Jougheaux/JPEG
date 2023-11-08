@@ -11,6 +11,11 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 <summary>Updates (Click here)</summary>
 
  --------------------------------------
+ - Koda support w. changes to magwell and mag retention
+ - Elongated pusher for reliable feeding with 36mm workers
+ - changed pusher construction (removed wedge)
+ - removed feed lips from cage inner
+ --------------------------------------
  - Stock Base & Battery Tray changed to have easier access to the battery
  - Lower changed to allow battery in grip and better printing
  - Grip bottom changed to allow battery in grip
@@ -42,12 +47,13 @@ This is my(RPI's) brushless competition blaster with all the bells and whistles 
 
 ## Features
 
-- 185fps average, 220 max, standard deviation of as low as 10fps (should increase with better wheels)
+- 193fps average, 207 max, standard deviation <10
 - Brushless
 - BCAR
 - Selectfire
 - Pre-wheel bearing guide
 - Runs on KellyIndustries Dettlaff and Plusmotors
+- Machined impeller wheels from Roboman
 
 ## Instructions
 - [Print guide](https://docs.google.com/spreadsheets/d/1kkiYsIlRcB7tAiH2ZU5NDMiAzAqcHJNqWwJKifN7Q3Q/edit#gid=258203420)
@@ -66,14 +72,11 @@ I was the one working on the CAD, but this couldn't have been done without the e
 - [Raymond Chien](https://www.linkedin.com/in/raymond-chien-1a0341229?original_referer=https%3A%2F%2Fwww.google.com%2F) for giving me parts and designs to work off of and for being a meme lord
 - [Brad](https://thefactoryamsterdam.com/) [Roboman](https://roboman.net/) for giving me  bearings and being a cool dude
 - [Gavinfuzzy](https://www.etsy.com/shop/GavinfuzzyCustoms) for giving me CAD for the worker stock from the SBL
-- Mike Farley and Mathew Davis for helping guide aesthetics and design langauge
+- Mike Farley and Mathew Davis for helping guide aesthetics and design language
 - RPI HVZ community for providing feedback and help
 
 ## To Do
-- Wiring guides
 - Solenoid version (pusher body can be repurposed to have a solenoid mount I just need to do CAD) (Eli Wu if you're reading this can I have one please)
-- See if sls cage is better
-- Fix brownouts with large bursts (15+)
 
 
 ## Licensing
